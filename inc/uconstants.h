@@ -7,7 +7,9 @@
 #ifndef 	WAIT_OBJECT_1
 #define 	WAIT_OBJECT_1	((WAIT_OBJECT_0)+1)
 #endif	//	WAIT_OBJECT_1
+#ifndef 	WAIT_OBJECT_2
 #define 	WAIT_OBJECT_2	((WAIT_OBJECT_0)+2)
+#endif	//	WAIT_OBJECT_2
 #ifndef 	PAGE_SIZE
 #define 	PAGE_SIZE		(4096)
 #endif	/*	PAGE_SIZE	*/
