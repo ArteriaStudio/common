@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <User_IncludePath>D:\App\Vulkan\Include;D:\App\FreeType\include;D:\App\SQLite\include;D:\App\DirectXTex;</User_IncludePath>
+    <User_LibraryPath>D:\App\Vulkan\lib;D:\App\FreeType\lib;D:\App\SQLite\lib;D:\App\DirectXTex\Lib;</User_LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(User_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(User_LibraryPath);</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="User_IncludePath">
+      <Value>$(User_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="User_LibraryPath">
+      <Value>$(User_LibraryPath)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
