@@ -6,7 +6,6 @@
 #include	<vector>
 #include	"utypes.h"
 
-
 //　DirectX Math
 #include	<DirectXMath.h>
 #include	<DirectXPackedVector.h>
@@ -306,7 +305,7 @@ enum class	ENbTexKind : uint32_t
 const uint32_t	Max_ENbTexKind = (uint32_t)ENbTexKind::Max;
 
 //======＜ 描画パイプライン識別子 ＞==================================================
-enum class	ENbLinear : uint32_t
+enum class	EVkLinear : uint32_t
 {
 	Unknown=UINT32_MAX, 	//　不明
 	Default=0,				//　既定
@@ -316,7 +315,37 @@ enum class	ENbLinear : uint32_t
 	Caret,					//　キャレット
 	Max,
 };
-const uint32_t	Max_ENbLinear = (uint32_t)ENbLinear::Max;
+const uint32_t	Max_EVkLinear = (uint32_t)EVkLinear::Max;
+
+//======＜ 画素バッファ識別子 ＞================================
+enum class	ENbColors : uint32_t
+{
+	Color,		//　画素
+	Depth0, 	//　深度（近傍）
+	Depth1, 	//　深度（中央）
+	Depth2, 	//　深度（遠望）
+	ENbColors_4,
+	ENbColors_5,
+	ENbColors_6,
+	ENbColors_7,
+	Max,
+};
+const uint32_t	Max_ENbColors = (uint32_t)ENbColors::Max;
+
+//======＜ 実行主体識別子 ＞====================================
+//ENbLayers
+enum class	ENbExecutive : uint32_t
+{
+	Darker, 	//　陰影
+	Flater, 	//　立体
+	Shower, 	//　表示
+	Viewer, 	//　平面
+	Writer, 	//　字形
+	Widger, 	//　表面
+	Merger, 	//　合成
+	Max,
+};
+const uint32_t	Max_EVkExecutive = (uint32_t)ENbExecutive::Max;
 
 //==============================================================================
 //　構造体宣言
@@ -717,6 +746,16 @@ struct	TIxMutare
 	TIxMutare();
 };
 #pragma pack(pop)
+//======＜ ビューポート定義 ＞==================================
+struct	TVkViewport
+{
+	float		fViewX; 		//　ビューポートの原点（左上）ｘ座標
+	float		fViewY; 		//　ビューポートの原点（左上）ｙ座標
+	float		fViewW; 		//　ビューポートの幅
+	float		fViewH; 		//　ビューポートの高
+	float		fMinZ;			//　ビューポートの最小深度（0.0f～1.0f）
+	float		fMaxZ;			//　ビューポートの最大深度（0.0f～1.0f）
+};
 
 //==============================================================================
 //　クラス宣言
