@@ -82,6 +82,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\inc\libux\uxEidos.h" />
+    <ClInclude Include="..\..\inc\libux\uxFormats.h" />
     <ClInclude Include="..\..\inc\uconstants.h" />
     <ClInclude Include="..\..\inc\utypes.h" />
     <ClInclude Include="pch.h" />

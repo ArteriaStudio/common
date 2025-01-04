@@ -17,7 +17,7 @@ using namespace DirectX::PackedVector;
 //　Vulkanは、glm で行列を作る（必須）
 #define 	GLM_FORCE_LEFT_HANDED			//　左手座標系
 #define 	GLM_FORCE_DEPTH_ZERO_TO_ONE 	//　深度値を０から１に強制
-#define		GLM_ENABLE_EXPERIMENTAL
+#define 	GLM_ENABLE_EXPERIMENTAL
 
 #include	<glm/glm.hpp>
 #include	<glm/vec3.hpp>
@@ -61,9 +61,11 @@ enum class	ENbOrder : uint32_t
 enum class	ENbLayout : int32_t
 {
 	Unknown=-1, 	//　未定義
-	Basic16=0,		//　
+	Basic16=0,		//　NDC 指定用簡易頂点データ用入力レイアウト
+	Basic16_,		//　
 	Basic32,		//　
 	Basic16_VT, 	//　頂点と画素要素のみ
+#ifdef	DISABLE_LAYOUTS
 	TexPoint,		//　テクスチャ付きポイントスプライト
 	Space16,		//　座標（u_int16[3]）メッシュ
 	ArrLayoutU, 	//　ARR 用入力レイアウト（half4）
@@ -72,6 +74,7 @@ enum class	ENbLayout : int32_t
 	Basic3, 		//　基本メッシュ
 	Basic4, 		//　基本メッシュ
 	Basic5, 		//　基本メッシュ
+#endif
 	Max,
 };
 //======＜ シェーダ種類 ＞==========================================================
