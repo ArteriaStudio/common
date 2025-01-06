@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <User_IncludePath>D:\App\Vulkan\Include;D:\App\FreeType\include;D:\App\SQLite\include;D:\App\DirectXTex;D:\App\OpenCV\include;</User_IncludePath>
+    <User_IncludePath>D:\App\Vulkan\Include;D:\App\FreeType\include;D:\App\SQLite\include;D:\App\DirectXTex;D:\App\OpenCV\include;D:\App\glm;</User_IncludePath>
     <User_LibraryPath>D:\App\Vulkan\lib;D:\App\FreeType\lib;D:\App\SQLite\lib;D:\App\DirectXTex\Lib;D:\App\OpenCV\lib;</User_LibraryPath>
   </PropertyGroup>
   <PropertyGroup>
