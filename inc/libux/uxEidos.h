@@ -15,8 +15,7 @@ using namespace DirectX::PackedVector;
 
 
 //　Vulkanは、glm で行列を作る（必須）
-//#define 	GLM_FORCE_LEFT_HANDED			//　左手座標系
-#define 	GLM_FORCE_RIGHT_HANDED			//　右手座標系
+#define 	GLM_FORCE_LEFT_HANDED			//　左手座標系
 #define 	GLM_FORCE_DEPTH_ZERO_TO_ONE 	//　深度値を０から１に強制
 #define 	GLM_ENABLE_EXPERIMENTAL
 
