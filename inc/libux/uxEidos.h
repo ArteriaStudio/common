@@ -6,6 +6,9 @@
 #include	<vector>
 #include	"utypes.h"
 
+#include	<dxgiformat.h>
+#include	<vulkan/vulkan_core.h>
+
 //　DirectX Math
 #include	<DirectXMath.h>
 #include	<DirectXPackedVector.h>
@@ -290,6 +293,7 @@ enum class	ENbAttachment : uint32_t
 };
 
 //======＜ リソース形式 ＞==========================================================
+/*
 enum class	ENbTexKind : uint32_t
 {
 	Unknown, 				//　未定義
@@ -306,6 +310,7 @@ enum class	ENbTexKind : uint32_t
 	Max,
 };
 const uint32_t	Max_ENbTexKind = (uint32_t)ENbTexKind::Max;
+*/
 
 //======＜ 描画パイプライン識別子 ＞==================================================
 enum class	EVkLinear : uint32_t
@@ -578,9 +583,9 @@ struct	TNbResource
 	ENbResType	rType;			//　リソース種類
 	uint32_t	uHash;			//　リソース識別子（ハッシュ値）
 	uint32_t	nSize;			//　リソースサイズ［単位：バイト］
-//	ENbTexType	uType;			//　テクスチャ種類（種類＝スロット）
 	uint32_t	uType;			//　テクスチャ種類（種類＝スロット）
-	ENbTexKind	uKind;			//　テクスチャ形式（＝DXGI_FORMAT）
+	DXGI_FORMAT dKind;			//　テクスチャ形式（＝DXGI_FORMAT）
+	VkFormat	vKind;			//　テクスチャ形式（＝VkFormat）
 	uint32_t	nOrder; 		//　テクスチャ次元
 	uint32_t	uLine;			//　テクスチャ行幅（scanline、単位：バイト）
 	uint32_t	uWidth; 		//　テクスチャ幅
