@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <User_IncludePath>D:\App\Vulkan\Include;D:\App\FreeType\include;D:\App\SQLite\include;D:\App\DirectXTex;D:\App\OpenCV\include;D:\App\glm;</User_IncludePath>
-    <User_LibraryPath>D:\App\Vulkan\lib;D:\App\FreeType\lib;D:\App\SQLite\lib;D:\App\DirectXTex\Lib;D:\App\OpenCV\lib;</User_LibraryPath>
+    <User_LibraryPath>D:\App\Vulkan\lib;D:\App\FreeType\lib;D:\App\SQLite\lib\$(Platform)\$(Configuration);D:\App\DirectXTex\Lib\$(Platform)\$(Configuration);D:\App\OpenCV\lib;</User_LibraryPath>
   </PropertyGroup>
   <PropertyGroup>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(User_IncludePath);</IncludePath>
