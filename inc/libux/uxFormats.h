@@ -35,16 +35,21 @@ struct	TBPolygons
 	VkIndexType 	m_vkIndexType;			//　索引配列要素サイズ
 };
 
-//　共通頂点バッファ
+//　頂点バッファ（PMX 用）
 struct	TPMXVertex
 {
 	XMFLOAT4	pos;
 	XMFLOAT4	normal;
 	XMFLOAT2	uv;
+	XMFLOAT2	p1;				//　padding.1
 	XMUINT4 	boneno;
 	XMFLOAT4	weight;
 	uint32_t	weightType; 	//　WEIGHTTYPE
+	XMUINT3 	p2;				//　padding.2
 	XMFLOAT3	fSDEFC; 		//　SDEFC
+	float		p3;				//　padding.3
 	XMFLOAT3	fSDEFR0;		//　SDEFR0
+	float		p4;				//　padding.4
 	XMFLOAT3	fSDEFR1;		//　SDEFR1
+	float		p5;				//　padding.5
 };
