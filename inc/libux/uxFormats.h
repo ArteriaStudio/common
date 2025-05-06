@@ -51,5 +51,5 @@ struct	TPMXVertex
 	XMFLOAT3	fSDEFR0;		//　SDEFR0
 	float		p4;				//　padding.4
 	XMFLOAT3	fSDEFR1;		//　SDEFR1
-	float		p5;				//　padding.5
+	float		fEdgeMag;		//　エッヂ倍率
 };
