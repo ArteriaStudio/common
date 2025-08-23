@@ -16,22 +16,22 @@ typedef unsigned short			u_short;
 typedef unsigned int			u_int;		//　※ コンパイラと出力プラットフォームに依存してサイズが変化する点に注意
 typedef unsigned long			u_long;
 #ifdef		_WIN32
-typedef unsigned __int64		u_int64;
+typedef unsigned __int64		uint64_t;
 typedef __int64 				s_int64;
-typedef unsigned __int32		u_int32;
+typedef unsigned __int32		uint32_t;
 typedef __int32 				s_int32;
-typedef unsigned __int16		u_int16;
+typedef unsigned __int16		uint16_t;
 typedef __int16 				s_int16;
 typedef unsigned __int8 		u_int8;
 typedef __int8					s_int8;
 #else
 //　for clang
 #include	<cstdint>
-typedef uint64_t				u_int64;
+typedef uint64_t				uint64_t;
 typedef int64_t 				s_int64;
-typedef uint32_t				u_int32;
+typedef uint32_t				uint32_t;
 typedef int32_t 				s_int32;
-typedef uint16_t				u_int16;
+typedef uint16_t				uint16_t;
 typedef int16_t 				s_int16;
 typedef uint8_t 				u_int8;
 typedef int8_t					s_int8;

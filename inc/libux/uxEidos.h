@@ -70,7 +70,7 @@ enum class	ENbLayout : int32_t
 	Basic16_VT, 	//　頂点と画素要素のみ
 #ifdef	DISABLE_LAYOUTS
 	TexPoint,		//　テクスチャ付きポイントスプライト
-	Space16,		//　座標（u_int16[3]）メッシュ
+	Space16,		//　座標（uint16_t[3]）メッシュ
 	ArrLayoutU, 	//　ARR 用入力レイアウト（half4）
 	ArrLayoutF, 	//　ARR 用入力レイアウト（float3）
 	Basic2, 		//　基本メッシュ
@@ -490,7 +490,7 @@ typedef VNbColors32::iterator		INbColors32;
 //======＜ 索引要素（16bit integer） ＞=================================
 struct	TNbIndexs16
 {
-	uint16_t	p;		//　頂点番号（u_int16）
+	uint16_t	p;		//　頂点番号（uint16_t）
 };
 typedef std::vector<TNbIndexs16>	VNbIndexs16;
 typedef VNbIndexs16::iterator		INbIndexs16;
@@ -498,7 +498,7 @@ typedef VNbIndexs16::iterator		INbIndexs16;
 //======＜ 索引要素（32bit integer） ＞=================================
 struct	TNbIndexs32
 {
-	uint32_t	p;		//　頂点番号（u_int32）
+	uint32_t	p;		//　頂点番号（uint32_t）
 };
 typedef std::vector<TNbIndexs32>	VNbIndexs32;
 typedef VNbIndexs32::iterator		INbIndexs32;
