@@ -351,6 +351,7 @@ enum class	ENbExecutive : uint32_t
 	Writer, 	//　字形
 	Widger, 	//　表面
 	Merger, 	//　合成
+	DrawActors,	//　アクター描画
 	Max,
 };
 const uint32_t	Max_EVkExecutive = (uint32_t)ENbExecutive::Max;
